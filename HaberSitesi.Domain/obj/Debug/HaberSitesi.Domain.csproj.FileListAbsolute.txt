@@ -7,3 +7,4 @@ C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\bin\Debug\HaberS
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\bin\Debug\HaberSitesi.Domain.pdb
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.dll
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.csprojResolveAssemblyReference.cache
