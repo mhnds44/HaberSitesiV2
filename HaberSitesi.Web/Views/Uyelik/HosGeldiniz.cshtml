@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "HosGeldiniz";
+}
+
+<h2>HosGeldiniz</h2>
+
+@if (!string.IsNullOrEmpty(TempData["epostaOnayMesaj"] as string))
+{
+    <div class="editor-label">
+        @TempData["epostaOnayMesaj"].ToString()
+    </div>
+}

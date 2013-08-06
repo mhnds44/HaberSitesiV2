@@ -1,0 +1,24 @@
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.dll.config
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\EntityFramework.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Data.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\bin\Debug\EntityFramework.xml
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.csprojResolveAssemblyReference.cache
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.dll.config
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Service.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Data.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Service\obj\Debug\HaberSitesi.Service.pdb

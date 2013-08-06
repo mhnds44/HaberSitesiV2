@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Anasayfa";
+}
+@section Scripts {
+    <script src="@Url.Content("~/Scripts/hs_anasayfa.js")"></script>
+}
+
+<div class="sayfa">
+    <section class="section_big">
+        <aside class="aside_small float_left">
+            @Html.Action("_SolManset", "Ortak")
+        </aside>
+        <section class="section_middle">
+            @Html.Action("_Slider", "Ortak")
+        </section>
+        <aside class="aside_small float_right">
+            @Html.Action("_Yazarlar", "Ortak")
+        </aside>
+    </section>
+    <section class="section_big">
+        <aside class="aside_big float_left">
+            @Html.Action("_KategoriHaberler", "Ortak")
+        </aside>
+        <aside class="aside_middle float_right">
+            @Html.Action("_EnCokOkunanlar", "Ortak")
+        </aside>
+    </section>
+</div>

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Kategori>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Ad, "KategoriDetay", "Kategori", new { kategoriAd = item.SeoAd }, null)
+        </li>
+    }
+</ul>

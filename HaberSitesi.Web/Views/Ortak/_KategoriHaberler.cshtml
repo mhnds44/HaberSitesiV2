@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Kategori>
+
+<div id="kategori_haberler">
+    @foreach (var kategori in Model)
+    {
+        <div class="kategori tutucu">
+            <div class="kategori_baslik">
+                @kategori.Ad
+            </div>
+            <div class="haberler">
+                @{
+        int kayitSayisi = 4;
+        int atla = 0;
+        if (Model.Count() == 1)
+        {
+            // kategori detay sayfasında
+            // kategoriye ait tüm haberleri 
+            // cekiyoruz, ayrıca sol mansetteki
+            // haber sayisi kadar atlıyoruz
+            kayitSayisi = 20;
+            atla = 3;
+        }
+        var haberler = kategori.Haberler
+            .Where(x => x.HaberTipId == 1 && x.Yayinda)
+            .OrderByDescending(x => x.YayinlanmaTarihi)
+            .Skip(atla)
+            .Take(kayitSayisi);
+
+        foreach (var haber in haberler)
+        {
+                    <a href="@Url.Action("HaberDetay", "Haber", new { id = haber.Id, seoBaslik = haber.SeoBaslik, kategori = haber.Kategori.SeoAd })" class="resim_link_2">
+                        <div class="haber">
+                            <div>
+                                <img src="~/@haber.KucukProfilResim" alt="@haber.Baslik" />
+                            </div>
+                            <div class="baslik">
+                                <h2>
+                                    @haber.Baslik
+                                </h2>
+                            </div>
+                            <div class="aciklama">
+                                <h5>
+                                    @haber.Aciklama
+                                </h5>
+                            </div>
+                        </div>
+                    </a>
+        }
+                }
+            </div>
+        </div>
+    }
+</div>

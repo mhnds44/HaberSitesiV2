@@ -1,0 +1,53 @@
+﻿@model HaberSitesi.Web.Models.GirisModel
+
+@{
+    ViewBag.Title = "Giris Yap";
+}
+
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Giriş Yap</legend>
+
+        @if (!string.IsNullOrEmpty(TempData["epostaOnayMesaj"] as string))
+        {
+            <div class="editor-label">
+                @TempData["epostaOnayMesaj"].ToString()
+            </div>
+        }
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Eposta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Eposta)
+            @Html.ValidationMessageFor(model => model.Eposta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sifre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Sifre)
+            @Html.ValidationMessageFor(model => model.Sifre)
+        </div>
+
+        <div class="editor-label">
+            @Html.EditorFor(model => model.BeniHatirla)
+            @Html.LabelFor(model => model.BeniHatirla)
+            @Html.ValidationMessageFor(model => model.BeniHatirla)
+        </div>
+
+        <p>
+            <input type="submit" value="Giriş" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Haber>
+
+<div id="sol_manset_haberler" class="tutucu">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("HaberDetay", "Haber", new { id = item.Id, seoBaslik = item.SeoBaslik, kategori = item.Kategori.SeoAd })" class="resim_link">
+            <div class="sol_manset">
+                <img src="~/@item.KucukProfilResim" alt="@item.Baslik" />
+                <div class="baslik_bg">
+                </div>
+                <div class="baslik">
+                    <h2>@item.Baslik</h2>
+                </div>
+            </div>
+        </a>
+    }
+</div>

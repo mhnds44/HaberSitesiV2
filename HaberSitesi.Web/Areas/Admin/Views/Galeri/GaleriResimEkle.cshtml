@@ -1,0 +1,33 @@
+﻿@model HaberSitesi.Web.Areas.Admin.Models.GaleriResimModel
+
+@{
+    ViewBag.Title = "Galeri Resim Ekle";
+}
+<h2>@Model.Galeri.Ad</h2>
+@using (Html.BeginForm("GaleriResimEkle", "Galeri", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(model => model.Galeri.Id)
+    <div class="form_container">
+        <div class="editor-label">@Html.LabelFor(model => model.Resimler)</div>
+        <div class="editor-field">@Html.TextBoxFor(model => model.Resimler, new { type = "file", multiple = "multiple" })
+        </div>
+        <div>@Html.ValidationMessageFor(model => model.Resimler)</div>
+
+        <div>
+            <input type="submit" value="Kaydet" />
+        </div>
+    </div>
+}
+
+<div id="galeri_resimler">
+    @foreach (var item in Model.Galeri.Resimler)
+	{
+        <div class="resim">
+            <img src="~/@item.KucukResim" />
+        </div>
+	}
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

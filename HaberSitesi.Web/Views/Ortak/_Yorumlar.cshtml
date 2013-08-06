@@ -1,0 +1,55 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Yorum>
+@{
+    int kayitSayisi = Model.Count();
+    int toplamKayit = ViewBag.ToplamKayit;
+
+    int eski_yorum_sayisi = toplamKayit - kayitSayisi;
+}
+<script>
+    $(document).ready(function () {
+        $(".eski_yorumlar a").click(function (event) {
+            event.preventDefault();
+            $("#yorumlar .loading_image").show();
+            $.ajax({
+                url: $(this).attr('href'),
+                type: "POST",
+                success: function (data) {
+                    $("#yorumlar").html(data);
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                },
+                complete: function () {
+                    $("#yorumlar .loading_image").hide();
+                }
+            });
+        });
+    });
+</script>
+<div class="baslik">
+    GÖSTERİLEN YORUMLAR (@kayitSayisi)
+</div>
+@foreach (var item in Model)
+{
+    <div class="yorum">
+        <div class="yorumcu">
+            @Html.DisplayFor(modelItem => item.YorumcuAd)
+        </div>
+        <div class="yorum_metin">
+            @Html.DisplayFor(modelItem => item.YorumMetin)
+        </div>
+        <div class="tarih">
+            @item.OlusturmaTarihi.ToString("d MMMM yyyy - HH:mm")
+        </div>
+    </div>
+}
+@if (kayitSayisi < toplamKayit)
+{
+    <div class="eski_yorumlar">
+        @Html.ActionLink("Önceki Yorumlar (" + eski_yorum_sayisi.ToString() + ")", "_Yorumlar", "Ortak", new { kayitSayisi = kayitSayisi, haberId = ViewBag.HaberId }, null)
+        <div class="loading_image">
+            <img src="@Url.Content("~/Images/Icons/Kucuk/ajax-loader.gif")" alt="loading_image" />
+        </div>
+    </div>
+
+}

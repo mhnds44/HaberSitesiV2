@@ -1,0 +1,319 @@
+﻿#galeri_resimler {}
+#galeri_resimler .resim {width:200px;height:150px;float:left;margin:0 5px 0 0;}
+#galeri_resimler .resim img {width:100%;height:100%;}
+
+/*  linkler
+-----------------------------------------------------------*/
+.admin_menu_link {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-position: left center;
+}
+
+#link_haberler {
+    background-image: url(icons/16/news_16.png);
+}
+
+#link_galeriler {
+    background-image: url(icons/16/image_16.png);
+}
+
+#link_kategoriler {
+    background-image: url(icons/16/category_16.png);
+}
+
+#link_etiketler {
+    background-image: url(icons/16/attachment_16.png);
+}
+
+#link_kullanicilar {
+    background-image: url(icons/16/user_close_16.png);
+}
+
+#link_roller {
+    background-image: url(icons/16/user_close_edit_16.png);
+}
+
+#link_yorumlar {
+    background-image: url(icons/16/comment_16.png);
+}
+
+#link_koseyazilari {
+    background-image: url(icons/16/notes_16.png);
+}
+
+
+
+/* layouts 
+-----------------------------------------------------------*/
+.tablo_resim {
+    width: 150px;
+    height: 100px;
+}
+
+
+.tablo_buton_red {
+    display: block;
+    border: 1px solid #232323;
+    background-color: #f00;
+    text-align: center;
+}
+
+.tablo_buton_green {
+    display: block;
+    border: 1px solid #232323;
+    background-color: #00ff21;
+    text-align: center;
+}
+
+.tablo_buton {
+    border: 1px solid #808080;
+    cursor: pointer;
+    display: block;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+#admin_menu {
+}
+
+    #admin_menu ul {
+    }
+
+        #admin_menu ul li {
+        }
+
+            #admin_menu ul li a {
+                display: block;
+                height: 25px;
+                line-height: 25px;
+            }
+
+                #admin_menu ul li a:hover {
+                    text-decoration: underline;
+                }
+
+#admin_left {
+    float: left;
+    width: 150px;
+    min-height: 300px;
+    background-color: #ddd;
+    margin-top: 5px;
+}
+
+#admin_right {
+    float: left;
+    width: 825px;
+    margin: 5px 0 0 5px;
+}
+
+#body {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+#banner {
+    height: 50px;
+}
+
+.horizontal_menu {
+    padding: 5px;
+}
+
+    .horizontal_menu ul {
+    }
+
+        .horizontal_menu ul li {
+            display: inline-block;
+            list-style: none;
+        }
+
+            .horizontal_menu ul li a {
+                display: block;
+            }
+
+.vertical_menu {
+    padding: 10px;
+}
+
+    .vertical_menu ul {
+    }
+
+        .vertical_menu ul li {
+            list-style: none;
+        }
+
+            .vertical_menu ul li a {
+                display: block;
+            }
+
+#menu {
+    background-color: #00106b;
+}
+
+    #menu ul {
+    }
+
+        #menu ul li {
+        }
+
+            #menu ul li a {
+                display: block;
+                color: #fff;
+            }
+
+#top_menu {
+}
+
+    #top_menu ul {
+    }
+
+        #top_menu ul li {
+        }
+
+            #top_menu ul li a {
+                display: block;
+                color: #fff;
+            }
+
+#login_menu {
+}
+
+    #login_menu ul {
+    }
+
+        #login_menu ul li {
+        }
+
+            #login_menu ul li a {
+                display: block;
+                color: #fff;
+            }
+
+
+
+#top_bar {
+    background-color: #900000;
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+
+/* defaults 
+-----------------------------------------------------------*/
+html {
+    background-color: #ddd;
+}
+
+body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    border: 1px solid #808080;
+    margin: 0 auto;
+    width: 980px;
+    padding: 5px;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+/* input elements
+-----------------------------------------------------------*/
+input {
+    width: 200px;
+    padding: 3px;
+}
+
+textarea {
+    width: 202px;
+    padding: 3px;
+}
+
+select {
+    width: 209px;
+    padding: 3px;
+}
+
+input[type=submit] {
+    border: 1px solid #808080;
+    padding: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    width: 209px;
+}
+
+input[type=checkbox] {
+    width: auto;
+}
+
+.buyuk_textbox {width:100%;}
+.buyuk_textarea {width:100%;height:100px;}
+.buyuk_select {width:100%;}
+
+.orta_textbox {width:400px;}
+.orta_textarea {width:400px;height:100px;}
+.orta_select {width:409px;}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 5px;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

@@ -1,0 +1,21 @@
+﻿@if (Request.IsAuthenticated)
+{
+    HaberSitesi.Domain.DomainModel.Kullanici kullanici = ViewBag.AktifKullanici;
+    <ul>
+        <li>
+            @Html.ActionLink(kullanici.KullaniciAdi, "Profil", "Uyelik", new { area = "" }, null)
+        </li>
+        <li>
+            @Html.ActionLink("Çıkış", "Cikis", "Uyelik", new { area = "" }, null)
+        </li>
+    </ul>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Kayıt Ol", "KayitOl", "Uyelik")
+        </li>
+        <li>@Html.ActionLink("Giriş Yap", "GirisYap", "Uyelik")
+        </li>
+    </ul>
+}

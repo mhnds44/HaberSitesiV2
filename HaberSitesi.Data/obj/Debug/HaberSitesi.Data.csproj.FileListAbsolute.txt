@@ -1,0 +1,20 @@
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.dll.config
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\EntityFramework.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\bin\Debug\EntityFramework.xml
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.csprojResolveAssemblyReference.cache
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.dll.config
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\HaberSitesi.Data.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Data\obj\Debug\HaberSitesi.Data.pdb

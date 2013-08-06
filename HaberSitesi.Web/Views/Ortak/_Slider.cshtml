@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Haber>
+
+<div id="slider" class="tutucu">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("HaberDetay", "Haber", new { id = item.Id, seoBaslik = item.SeoBaslik, kategori = item.Kategori.SeoAd })" class="gizli">
+            <div class="slider">
+                <img src="~/@item.BuyukProfilResim" alt="@item.Baslik" />
+                <div class="baslik_bg">
+                </div>
+                <div class="baslik">
+                    <h1>@item.Baslik</h1>
+                </div>
+            </div>
+        </a>
+    }
+    <div id="slider_nav">
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <div class="button">
+                <a href="@Url.Action("HaberDetay", "Haber", new { id = Model.ElementAt(i).Id, seoBaslik = Model.ElementAt(i).SeoBaslik, kategori = Model.ElementAt(i).Kategori.SeoAd })" class="resim_link">
+                    @(i+1)
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model HaberSitesi.Domain.DomainModel.Kategori
+@{
+    ViewBag.Title = "Kategori Detay";
+    ViewBag.Kategori = Model.Ad;
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/Scripts/hs_anasayfa.js")"></script>
+}
+
+<div class="sayfa">
+    <section class="section_big">
+        <aside class="aside_small float_left">
+            @Html.Action("_SolManset", "Ortak", new { kategoriId = Model.Id })
+        </aside>
+        <section class="section_middle">
+            @Html.Action("_Slider", "Ortak", new { kategoriId = Model.Id })
+        </section>
+        <aside class="aside_small float_right">
+            @Html.Action("_Yazarlar", "Ortak")
+        </aside>
+    </section>
+    <section class="section_big">
+        <aside class="aside_big float_left">
+            @Html.Action("_KategoriHaberler", "Ortak", new { kategoriId = Model.Id })
+        </aside>
+        <aside class="aside_middle float_right">
+            @Html.Action("_EnCokOkunanlar", "Ortak", new { kategoriId = Model.Id })
+        </aside>
+    </section>
+</div>

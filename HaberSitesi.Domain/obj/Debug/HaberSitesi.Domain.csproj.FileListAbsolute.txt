@@ -1,0 +1,9 @@
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Domain\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Domain\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\bin\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\bin\Debug\HaberSitesi.Domain.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.dll
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Domain\obj\Debug\HaberSitesi.Domain.pdb

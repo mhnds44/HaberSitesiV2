@@ -1,0 +1,52 @@
+﻿@model HaberSitesi.Web.Areas.Admin.Models.GaleriModel
+
+@{
+    ViewBag.Title = "GaleriEkle";
+}
+<script>
+    $(document).ready(function () {
+        // haberler single select
+        //--------------------------------------------------------------------------
+        $("#HaberId").chosen({
+            no_results_text: "Girdi için sonuç bulunamadı: ",
+            placeholder_text: "Haber seçiniz..."
+        });
+    });
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Galeri Ekleme</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ad)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Ad, new { @class = "orta_textbox" })
+            @Html.ValidationMessageFor(model => model.Ad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HaberId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.HaberId, new SelectList(Model.Haberler, "Id", "Baslik"), "--- Haber Seçiniz ---", new { @class = "orta_select" })
+            @Html.ValidationMessageFor(model => model.HaberId)
+        </div>
+
+        <p>
+            <input type="submit" value="Kaydet" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Listeye geri dön", "Galeriler")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

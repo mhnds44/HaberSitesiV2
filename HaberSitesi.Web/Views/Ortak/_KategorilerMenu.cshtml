@@ -1,0 +1,12 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Kategori>
+@{
+    var anaKategoriler = Model.Where(x => x.AnaMenu);
+    var altMenuler = Model.Where(x => !x.AnaMenu);
+}
+<ul>
+    @foreach (var item in anaKategoriler)
+    {
+        <li>@Html.ActionLink(item.Ad, "KategoriDetay", "Kategori", new { kategoriAd = item.SeoAd }, null)
+        </li>
+    }
+</ul>

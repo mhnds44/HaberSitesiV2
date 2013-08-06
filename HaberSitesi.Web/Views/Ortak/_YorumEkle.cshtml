@@ -1,0 +1,70 @@
+﻿@model HaberSitesi.Web.Models.YorumModel
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    $(document).ready(function () {
+        $("#form_yorum_ekle").submit(function () {
+            event.preventDefault();
+            var form = $(this);
+            $("#yorum_ekle_submit_buton").attr('disabled', 'disabled');
+            $("#yorum_ekle .loading_image").show();
+            $.ajax({
+                url: form.attr('action'),
+                type: "POST",
+                data: form.serialize(),
+                success: function (data) {
+                    $("#yorum_ekle_submit_buton").removeAttr('disabled');
+                    if (data.success) {
+                        $("#yorumlar").load(app_root + "Ortak/_Yorumlar?haberId=" + data.haberId);
+                        $("#yorum_ekle").load(app_root + "Ortak/_YorumEkle?haberId=" + data.haberId);
+                    } else {
+                        $("#yorum_ekle").html(data);
+                    }
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                },
+                complete: function () {
+                    $("#yorum_ekle .loading_image").hide();
+                }
+            });
+        });
+    });
+</script>
+
+@using (Html.BeginForm("_YorumEkle", "Ortak", FormMethod.Post, new { id = "form_yorum_ekle" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.HaberId)
+   
+    <div class="editor-label">
+        @Html.LabelFor(model => model.YorumcuAd)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.YorumcuAd)
+        @Html.ValidationMessageFor(model => model.YorumcuAd)
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(model => model.YorumMetin)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(model => model.YorumMetin, new { @class = "buyuk_textarea" })
+        @Html.ValidationMessageFor(model => model.YorumMetin)
+    </div>
+
+    <div class="yorum_ekle">
+        <div class="float_left">
+            <input type="submit" value="Kaydet" id="yorum_ekle_submit_buton" />
+        </div>
+        <div class="loading_image">
+            <img src="@Url.Content("~/Images/Icons/Kucuk/ajax-loader.gif")" alt="loading_image" />
+        </div>
+
+    </div>
+}

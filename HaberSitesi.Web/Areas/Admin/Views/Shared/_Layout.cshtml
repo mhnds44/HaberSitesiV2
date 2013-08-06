@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/reset")
+    @Styles.Render("~/Admin/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+
+    <link href="@Url.Content("~/Content/EasyUI/themes/bootstrap/easyui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/EasyUI/themes/icon.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Content/EasyUI/jquery.easyui.min.js")"></script>
+
+    <link href="@Url.Content("~/Content/Chosen/chosen.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Content/Chosen/chosen.jquery.min.js")"></script>
+
+    <script src="@Url.Content("~/Areas/Admin/Scripts/tablolar.js")"></script>
+    <script src="@Url.Content("~/Areas/Admin/Scripts/genel.js")"></script>
+
+    <script src="@Url.Content("~/Content/ckeditor/ckeditor.js")"></script>
+    <script src="@Url.Content("~/Content/ckfinder/ckfinder.js")"></script>
+
+    <script type="text/javascript">
+        var app_root = '@Url.Content("~/")';
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div id="top_bar">
+            <div class="float_left">
+                <nav id="top_menu" class="horizontal_menu">
+                    <ul>
+                        <li>@Html.ActionLink("Ana Sayfa", "Index", "Anasayfa", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Link 2", "Action")</li>
+                        <li>@Html.ActionLink("Link 3", "Action")</li>
+                        <li>@Html.ActionLink("Link 4", "Action")</li>
+                        <li>@Html.ActionLink("Link 5", "Action")</li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin", "Anasayfa", "Admin", new { area = "Admin" }, null)
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+            <div class="float_right">
+                <nav id="login_menu" class="horizontal_menu">
+                    @Html.Partial("_GirisPartial")
+                </nav>
+            </div>
+        </div>
+        <div id="banner">banner</div>
+        <div id="menu" class="horizontal_menu">menu</div>
+    </header>
+    <article id="body">
+        <aside id="admin_left">
+            <nav id="admin_menu" class="vertical_menu">
+                <ul>
+                    <li>@Html.ActionLink("Haberler", "Haberler", "Haber", new { area = "Admin" }, new { id = "link_haberler", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Köşe Yazıları", "KoseYazilari", "KoseYazisi", new { area = "Admin" }, new { id = "link_koseyazilari", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Kategoriler", "Kategoriler", "Kategori", new { area = "Admin" }, new { id = "link_kategoriler", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Galeriler", "Galeriler", "Galeri", new { area = "Admin" }, new { id = "link_galeriler", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Yorumlar", "Yorumlar", "Yorum", new { area = "Admin" }, new { id = "link_yorumlar", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Kullanıcılar", "Kullanicilar", "Kullanici", new { area = "Admin" }, new { id = "link_kullanicilar", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Roller", "Roller", "Rol", new { area = "Admin" }, new { id = "link_roller", @class = "admin_menu_link" })
+                    </li>
+                    <li>@Html.ActionLink("Etiketler", "Etiketler", "Etiket", new { area = "Admin" }, new { id = "link_etiketler", @class = "admin_menu_link" })
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <aside id="admin_right">@RenderBody()</aside>
+    </article>
+    <footer id="footer">footer</footer>
+</body>
+</html>

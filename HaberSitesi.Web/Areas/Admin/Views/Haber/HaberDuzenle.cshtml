@@ -1,0 +1,122 @@
+﻿@model HaberSitesi.Web.Areas.Admin.Models.HaberModel
+
+@{
+    ViewBag.Title = "Haber Düzenle";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // etiketler multi select
+        //--------------------------------------------------------------------------
+        $("#SecilenEtiketler").chosen({
+            no_results_text: "Girdi için sonuç bulunamadı: ",
+            placeholder_text: "Etiket seçiniz..."
+        });
+
+        CKEDITOR.replace('Icerik', {
+            filebrowserBrowseUrl: app_root + 'Content/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: app_root + 'Content/ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl: app_root + 'Content/ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl: app_root + 'Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: app_root + 'Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl: app_root + 'Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash'
+        });
+    });
+</script>
+
+@using (Html.BeginForm("HaberDuzenle", "Haber", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Haber Düzenleme</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">@Html.LabelFor(model => model.KucukProfilResim)</div>
+        <div class="editor-field"><img src="~/@Model.KucukProfilResim" width="150" height="100" /></div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Resim)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Resim, new { type = "file" })
+            @Html.ValidationMessageFor(model => model.Resim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Baslik)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Baslik, new { @class = "buyuk_textbox"})
+            @Html.ValidationMessageFor(model => model.Baslik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Aciklama)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Aciklama, new { @class = "buyuk_textarea"})
+            @Html.ValidationMessageFor(model => model.Aciklama)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Icerik)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Icerik, new { @class = "featured_textarea" })
+            @Html.ValidationMessageFor(model => model.Icerik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Kaynak)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Kaynak)
+            @Html.ValidationMessageFor(model => model.Kaynak)
+        </div>
+
+        <div class="editor-label">
+            @Html.EditorFor(model => model.Yayinda)
+            @Html.LabelFor(model => model.Yayinda)
+            @Html.ValidationMessageFor(model => model.Yayinda)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KategoriId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.KategoriId, new SelectList(Model.Kategoriler, "Id", "Ad"), "--- Kategori Seçiniz ---")
+            @Html.ValidationMessageFor(model => model.KategoriId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HaberPozisyonId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.HaberPozisyonId, new SelectList(Model.HaberPozisyonlar, "Id", "Ad"), "--- Pozisyon Seçiniz ---")
+            @Html.ValidationMessageFor(model => model.HaberPozisyonId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecilenEtiketler)
+        </div>
+        <div class="editor-field">
+            @Html.ListBoxFor(model => model.SecilenEtiketler, new SelectList(Model.Etiketler, "Id", "Ad"))
+            @Html.ValidationMessageFor(model => model.SecilenEtiketler)
+        </div>
+
+        <p>
+            <input type="submit" value="Kaydet" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Listeye geri dön", "Haberler")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,43 @@
+﻿@model HaberSitesi.Domain.DomainModel.Haber
+@{
+    ViewBag.Title = "Köşe Yazısı";
+}
+
+<section class="section_big">
+    <aside class="aside_big float_left">
+        <div id="one_cikanlar" class="tutucu">
+            @Html.Action("_OneCikanlar", "Ortak")
+        </div>
+        <div id="kose_yazisi_detay">
+            <div class="yazar_detay">
+                <div class="yazar_resim">
+                    <img src="~/@Model.Yazar.OrjinalProfilResim" />
+                </div>
+                <div class="yazar_info">
+                    <div class="ad">@Model.Yazar.KullaniciAdi</div>
+                    <div class="eposta">@Model.Yazar.Eposta</div>
+                </div>
+            </div>
+            <div class="detay_tarih">
+                @Html.Label("Yayınlanma Tarihi") : 
+            @Model.YayinlanmaTarihi.Value.ToString("d MMMM yyyy - HH:mm") <span class="float_right">@Model.OkunmaSayisi
+                okunma</span>
+            </div>
+            <div class="detay_baslik">
+                <h1>@Html.DisplayFor(model => model.Baslik)</h1>
+            </div>
+            <article class="detay_icerik">
+                @Html.Raw(Model.Icerik)
+            </article>
+        </div>
+        <div id="yorum_ekle" class="tutucu">
+            @Html.Action("_YorumEkle", "Ortak", new { haberId = Model.Id })
+        </div>
+        <div id="yorumlar" class="tutucu">
+            @Html.Action("_Yorumlar", "Ortak", new { haberId = Model.Id })
+        </div>
+    </aside>
+    <aside class="aside_middle float_right">
+        @Html.Action("_EnCokOkunanlar", "Ortak")
+    </aside>
+</section>

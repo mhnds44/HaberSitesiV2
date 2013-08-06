@@ -1,0 +1,46 @@
+﻿@model HaberSitesi.Web.Areas.Admin.Models.KullaniciRolModel
+
+@{
+    ViewBag.Title = "Kullanıcı Rol Düzenle";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // roller multi select
+        //--------------------------------------------------------------------------
+        $("#SecilenRoller").chosen({
+            no_results_text: "Girdi için sonuç bulunamadı: ",
+            placeholder_text: "Rol seçiniz..."
+        });
+    });
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>@Model.Kullanici.KullaniciAdi Rol Düzenleme</legend>
+        @Html.HiddenFor(model => model.Kullanici.Id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecilenRoller)
+        </div>
+        <div class="editor-field">
+            @Html.ListBoxFor(model => model.SecilenRoller, new SelectList(Model.Roller, "Id", "Ad"))
+            @Html.ValidationMessageFor(model => model.SecilenRoller)
+        </div>
+
+        <p>
+            <input type="submit" value="Kaydet" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Listeye geri dön", "Kullanicilar")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

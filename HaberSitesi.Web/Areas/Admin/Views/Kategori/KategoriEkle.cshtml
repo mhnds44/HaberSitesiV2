@@ -1,0 +1,57 @@
+﻿@model HaberSitesi.Web.Areas.Admin.Models.KategoriModel
+
+@{
+    ViewBag.Title = "KategoriEkle";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Kategori Ekle</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ad)
+            @Html.ValidationMessageFor(model => model.Ad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Aciklama)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Aciklama)
+            @Html.ValidationMessageFor(model => model.Aciklama)
+        </div>
+
+        <div class="editor-label">
+            @Html.EditorFor(model => model.AnaMenu)
+            @Html.LabelFor(model => model.AnaMenu)
+            @Html.ValidationMessageFor(model => model.AnaMenu)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiraNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiraNo)
+            @Html.ValidationMessageFor(model => model.SiraNo)
+        </div>
+
+        <p>
+            <input type="submit" value="Kaydet" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Listeye geri dön", "Kategoriler")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

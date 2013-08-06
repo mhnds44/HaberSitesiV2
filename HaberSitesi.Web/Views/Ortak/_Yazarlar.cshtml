@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HaberSitesi.Domain.DomainModel.Haber>
+
+<div id="yazarlar" class="tutucu">
+    <div id="yazarlar_baslik">
+        @Html.ActionLink("YAZARLAR", "Yazarlar", "Yazar")
+    </div>
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("KoseYazisiDetay", "KoseYazisi", new { id = item.Id, seoBaslik = item.SeoBaslik, kategori = item.Kategori.SeoAd })" class="resim_link">
+            <div class="yazar">
+                <img src="~/@item.Yazar.KucukProfilResim" alt="@item.Baslik" />
+                <div class="baslik">
+                    <div>
+                        <h5 class="yazar_adi">
+                            @item.Yazar.KullaniciAdi
+                        </h5>
+                    </div>
+                    <div>
+                        <h2 class="kose_yazisi">@item.Baslik</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+    }
+</div>

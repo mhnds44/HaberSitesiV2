@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/reset")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        var app_root = '@Url.Content("~/")';
+
+        $(document).ready(function () {
+            $('#menu ul li a').each(function () {
+                $(this).css({ "width": $(this).width() + "px" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header id="header" class="tutucu">
+        <div id="top_bar">
+            <div class="float_left">
+                <nav id="top_menu" class="horizontal_menu">
+                    <ul>
+                        <li>@Html.ActionLink("Anasayfa","Index", "Anasayfa")</li>
+                        <li>@Html.ActionLink("Hakkımızda","Hakkimizda", "Anasayfa")</li>
+                        <li>@Html.ActionLink("İletişim","Iletisim", "Anasayfa")</li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin", "Anasayfa", "Admin", new { area = "Admin" }, null)
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+            <div class="float_right">
+                <nav id="login_menu" class="horizontal_menu">
+                    @Html.Partial("_GirisPartial")
+                </nav>
+            </div>
+        </div>
+        <div id="banner">
+            @ViewBag.Kategori
+        </div>
+        <nav id="menu" class="horizontal_menu">
+            @Html.Action("_KategorilerMenu", "Ortak")
+        </nav>
+    </header>
+    <article id="body">
+        @RenderBody()
+    </article>
+    <footer id="footer" class="tutucu">
+        <nav id="footer_menu" class="horizontal_menu">
+            @Html.Action("_FooterMenu", "Ortak")
+        </nav>
+    </footer>
+</body>
+</html>
