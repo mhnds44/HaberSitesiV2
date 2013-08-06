@@ -245,39 +245,6 @@
     <Content Include="Images\Icons\Buyuk\no_profile_image.png" />
     <Content Include="Images\Icons\Kucuk\no_profile_image.png" />
     <Content Include="Images\Icons\Orta\no_profile_image.png" />
-    <Content Include="Images\uploads\Haber\Buyuk\0c138cc5-a93e-43e1-86c9-d61ab6eb0013.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\51f17307-4e83-4da7-9745-3ebf59b7c1e8.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\5d27b571-0528-44a2-bb55-e1de57a4127a.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\5d9022ee-ccc3-4b92-8197-38b75b14bd8b.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\90562bc4-f5fc-4c90-9c0b-661776132d51.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\91f5836a-0aa4-482e-8fc6-d15e256a7aaf.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\a169eccd-8c69-46ff-a992-41434bc9f3a1.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\b532d959-5b4a-435d-99a6-302d64d8669c.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\d6b75381-e7c5-453c-bc77-9791c0f86714.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\d971a422-2bc7-4127-9af1-9454f11bf7e4.jpg" />
-    <Content Include="Images\uploads\Haber\Buyuk\eba9af6d-8e04-438e-a5c2-4af28d7ba448.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\0c138cc5-a93e-43e1-86c9-d61ab6eb0013.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\51f17307-4e83-4da7-9745-3ebf59b7c1e8.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\5d27b571-0528-44a2-bb55-e1de57a4127a.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\5d9022ee-ccc3-4b92-8197-38b75b14bd8b.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\90562bc4-f5fc-4c90-9c0b-661776132d51.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\91f5836a-0aa4-482e-8fc6-d15e256a7aaf.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\a169eccd-8c69-46ff-a992-41434bc9f3a1.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\b532d959-5b4a-435d-99a6-302d64d8669c.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\d6b75381-e7c5-453c-bc77-9791c0f86714.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\d971a422-2bc7-4127-9af1-9454f11bf7e4.jpg" />
-    <Content Include="Images\uploads\Haber\Kucuk\eba9af6d-8e04-438e-a5c2-4af28d7ba448.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\0c138cc5-a93e-43e1-86c9-d61ab6eb0013.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\51f17307-4e83-4da7-9745-3ebf59b7c1e8.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\5d27b571-0528-44a2-bb55-e1de57a4127a.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\5d9022ee-ccc3-4b92-8197-38b75b14bd8b.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\90562bc4-f5fc-4c90-9c0b-661776132d51.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\91f5836a-0aa4-482e-8fc6-d15e256a7aaf.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\a169eccd-8c69-46ff-a992-41434bc9f3a1.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\b532d959-5b4a-435d-99a6-302d64d8669c.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\d6b75381-e7c5-453c-bc77-9791c0f86714.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\d971a422-2bc7-4127-9af1-9454f11bf7e4.jpg" />
-    <Content Include="Images\uploads\Haber\Orijinal\eba9af6d-8e04-438e-a5c2-4af28d7ba448.jpg" />
     <Content Include="Scripts\hs_anasayfa.js" />
     <Content Include="Views\Ortak\_SolManset.cshtml" />
     <Content Include="Views\Haber\HaberDetay.cshtml" />
@@ -1944,6 +1911,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
