@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace HaberSitesi.Web.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class EtiketController : AnaController
     {
         private HaberSitesiDbContext db;

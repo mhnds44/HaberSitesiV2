@@ -14,6 +14,7 @@ using HaberSitesi.Utilities;
 
 namespace HaberSitesi.Web.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class KoseYazisiController : AnaController
     {
         private HaberSitesiDbContext db;

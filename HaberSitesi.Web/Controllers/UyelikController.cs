@@ -20,14 +20,14 @@ namespace HaberSitesi.Web.Controllers
             this.kullaniciServis = new KullaniciServis(db);
         }
 
-        public ActionResult GirisYap(string returnUrl)
+        public ActionResult GirisYap(string ReturnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewBag.ReturnUrl = ReturnUrl;
             return View();
         }
 
         [HttpPost]
-        public ActionResult GirisYap(GirisModel model, string returnUrl)
+        public ActionResult GirisYap(GirisModel model, string ReturnUrl)
         {
             if (ModelState.IsValid && kullaniciServis.KullaniciDogrula(model.Eposta, model.Sifre))
             {
@@ -39,7 +39,7 @@ namespace HaberSitesi.Web.Controllers
                     return View();
                 }
                 FormsAuthentication.SetAuthCookie(model.Eposta, model.BeniHatirla);
-                return RedirectToLocal(returnUrl);
+                return RedirectToLocal(ReturnUrl);
             }
             else
             {
