@@ -5,5 +5,6 @@ C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Core\o
 C:\Users\Acer\documents\visual studio 11\Projects\HaberSitesi\HaberSitesi.Core\obj\Debug\HaberSitesi.Core.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Core\bin\Debug\HaberSitesi.Core.dll
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Core\bin\Debug\HaberSitesi.Core.pdb
+C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Core\obj\Debug\HaberSitesi.Core.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Core\obj\Debug\HaberSitesi.Core.dll
 C:\Users\Acer\Documents\GitHub\HaberSitesiV2\HaberSitesi.Core\obj\Debug\HaberSitesi.Core.pdb
