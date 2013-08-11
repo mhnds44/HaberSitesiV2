@@ -5,7 +5,7 @@
     {
         <div class="kategori tutucu">
             <div class="kategori_baslik">
-                @kategori.Ad
+                @Html.ActionLink(kategori.Ad, "KategoriDetay", "Kategori", new { kategoriAd = kategori.SeoAd }, null)
             </div>
             <div class="haberler">
                 @{

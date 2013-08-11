@@ -70,7 +70,9 @@ namespace HaberSitesi.Web.Controllers
                         KullaniciAdi = model.KullaniciAdi,
                         Sifre = model.Sifre,
                         Onayli = false,
-                        OnayKodu = Guid.NewGuid()
+                        OnayKodu = Guid.NewGuid(),
+                        OrjinalProfilResim = "Images/Icons/Buyuk/no_profile_image.png",
+                        KucukProfilResim = "Images/Icons/Kucuk/no_profile_image.png"
                     };
 
                     kullaniciServis.KullaniciOlustur(kullanici);

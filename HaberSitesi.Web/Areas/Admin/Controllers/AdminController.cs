@@ -24,6 +24,5 @@ namespace HaberSitesi.Web.Areas.Admin.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
-
     }
 }

@@ -19,6 +19,7 @@ a:hover {}
 #top_bar {font-weight: bold;overflow: hidden;background-color:#333;}
 .float_left {float: left;}
 .float_right {float: right;}
+strong {font-weight:bold;}
 
 
 
@@ -129,7 +130,7 @@ a.resim_link_2:hover h2,a.resim_link_2:hover h1,a.resim_link_2:hover h3,a.resim_
 #kategori_haberler .haberler .haber .aciklama{padding:5px 0 0 0;font-size:12px;height:61px;line-height:15px;overflow:hidden;}
 #kategori_haberler .kategori {margin:0 0 5px 0;padding:0 0 10px 0;}
 
-#haber_detay {background-color:#fff;padding:10px;border:1px solid #bbc1c8;width:500px;}
+#haber_detay {padding:10px;width:500px;}
 #haber_detay .detay_baslik{font-size:20px;font-weight:bold;padding:5px 0px 10px 5px;}
 #haber_detay .detay_resim{padding:5px 0 5px 0;}
 #haber_detay .detay_resim img{width:100%;}
@@ -138,7 +139,7 @@ a.resim_link_2:hover h2,a.resim_link_2:hover h1,a.resim_link_2:hover h3,a.resim_
 #haber_detay .detay_icerik{padding:5px 0 5px 0;line-height:20px;}
 #haber_detay .detay_icerik p{padding:5px 0 5px 0;}
 
-#kose_yazisi_detay {background-color:#fff;padding:10px;border:1px solid #bbc1c8;width:500px;}
+#kose_yazisi_detay {padding:10px;width:500px;}
 #kose_yazisi_detay .detay_baslik{font-size:20px;font-weight:bold;padding:10px 0px 10px 5px;}
 #kose_yazisi_detay .detay_resim{padding:5px 0 5px 0;}
 #kose_yazisi_detay .detay_resim img{width:100%;}
